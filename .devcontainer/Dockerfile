@@ -1,5 +1,7 @@
 FROM python:3.13-slim
 
+ENV TZ=America/Sao_Paulo
+
 # =============================
 # Instala dependências de sistema e ferramentas de desenvolvimento
 # =============================
