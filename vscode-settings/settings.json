@@ -1,7 +1,7 @@
 {
   "workbench.startupEditor": "newUntitledFile",
-  "editor.lineHeight": 1.8,
-  "editor.fontWeight": "500",
+  "editor.lineHeight": 1.6,
+  "editor.fontWeight": "400",
   "editor.quickSuggestionsDelay": 200, // ?
   "javascript.suggest.autoImports": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
@@ -66,25 +66,6 @@
     "javascript": "jsx",
     "mdx": "jsx"
   },
-  "cSpell.enabledFiletypes": [
-    "!asciidoc",
-    "!c",
-    "!cpp",
-    "!csharp",
-    "!go",
-    "!handlebars",
-    "!haskell",
-    "!jade",
-    "!java",
-    "!latex",
-    "!php",
-    "!pug",
-    "!python",
-    "!restructuredtext",
-    "!rust",
-    "!scala",
-    "!scss"
-  ],
   "explorer.compactFolders": false,
   "git.enableSmartCommit": true,
   "editor.accessibilitySupport": "off",
@@ -124,8 +105,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "console-ninja.featureSet": "Community",
+  "editor.defaultFormatter": "prettier.prettier-vscode",
   "workbench.editor.empty.hint": "hidden",
   "update.showReleaseNotes": false,
   "security.promptForLocalFileProtocolHandling": false,
@@ -243,24 +223,13 @@
   "editor.mouseWheelZoom": true,
   "terminal.integrated.mouseWheelZoom": true,
   "files.autoSave": "onFocusChange",
-  "workbench.productIconTheme": "fluent-icons",
   "editor.wordWrap": "on",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.gpuAcceleration": "off",
   // "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
   "github.copilot.selectedCompletionModel": "",
-  "github.copilot.chat.agent.runTasks": true,
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.advanced": {
-    "chat.completions.enabled": true,
-    "chat.completions.experimental.enabled": true,
-    "chat.completions.experimental.suggestEdits.enabled": true,
-    "chat.completions.experimental.suggestEdits.codesearch.enabled": true,
-    "chat.agent.experimental.enabled": true,
-    "chat.agent.enabled": true
-  },
-  "workbench.preferredLightColorTheme": "Cursor Dark Core",
   "editor.tabCompletion": "on",
   "color-highlight.matchWords": true,
   "window.commandCenter": false,
@@ -286,12 +255,17 @@
     "GitHub.vscode-pull-request-github"
   ],
   "python.analysis.typeCheckingMode": "strict",
-  "workbench.iconTheme": "icons",
+  "workbench.iconTheme": "symbols",
   "python.analysis.diagnosticMode": "openFilesOnly",
-  "editor.hover.enabled": false,
+  "editor.hover.enabled": "off",
   "breadcrumbs.enabled": false,
   "problems.visibility": true,
-  "chat.mcp.discovery.enabled": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+  },
   "window.menuBarVisibility": "toggle",
   "terminal.integrated.suggest.enabled": true,
   "javascript.suggest.completeFunctionCalls": true,
@@ -392,18 +366,11 @@
       }
   ],
   "terminal.integrated.copyOnSelection": true,
-  "database-client.autoSync": true,
-  "workbench.preferredDarkColorTheme": "Cursor Dark Core",
-  "redhat.telemetry.enabled": false,
-  "workbench.colorTheme": "Cursor Dark Core",
-  "github.codespaces.showPerformanceExplorer": true,
-  "github.copilot.chat.agent.thinkingTool": true,
   "github.copilot.nextEditSuggestions.fixes": true,
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.edits.renderSideBySide": "auto",
-  // On explicit save, run sortImports source action. On auto save (window or focus change), run organizeImports source action.
   "editor.codeActionsOnSave": {
       "source.organizeImports": "always",
       "source.sortImports": "explicit",
@@ -427,12 +394,11 @@
   "notebook.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
-  "python.venvPath": "${workspaceFolder}/.venv",
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      // "source.fixAll": "explicit"
+      "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
     }
   },
@@ -441,7 +407,7 @@
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
   "errorLens.enabled": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "errorLens.statusBarIconsEnabled": true,
   "errorLens.gutterIconsEnabled": true,
   "errorLens.followCursor": "activeLine",
