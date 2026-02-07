@@ -1,18 +1,30 @@
 {
+  "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
-  "editor.lineHeight": 1.6,
+  "editor.lineHeight": 1.8,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
   "editor.fontWeight": "400",
   "editor.quickSuggestionsDelay": 200, // ?
+  "debug.console.fontSize": 14,
+  "files.eol": "\n",
+  "editor.lineNumbers": "on",
+  "workbench.activityBar.location": "top",
+  "workbench.editor.labelFormat": "short",
+  "editor.fontLigatures": true,
+  "editor.glyphMargin": true,
+  "breadcrumbs.enabled": true,
+  "terminal.integrated.fontSize": 14,
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "javascript.suggest.autoImports": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
   "editor.dragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [79, 120],
   "extensions.ignoreRecommendations": true,
   "typescript.tsserver.log": "off",
   "editor.stickyScroll.enabled": false,
@@ -36,11 +48,7 @@
     ".env.example": "gear"
   },
   "tailwindCSS.experimental.classRegex": [
-    [
-      "tv\\(([^)]*)\\)",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ],
-    "class:\\s*?[\"'`]([^\"'`]*).*?,"
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "editor.renderLineHighlight": "gutter",
   "cSpell.language": "en,pt",
@@ -56,32 +64,21 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "workbench.editor.labelFormat": "short",
-  "editor.fontLigatures": true,
   "emmet.includeLanguages": {
+    "django-html": "html",
     "javascript": "javascriptreact",
-    "mdx": "javascriptreact"
-  },
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx",
-    "mdx": "jsx"
+    "typescript": "typescriptreact"
   },
   "explorer.compactFolders": false,
   "git.enableSmartCommit": true,
   "editor.accessibilitySupport": "off",
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "graphql"
   ],
   "editor.semanticHighlighting.enabled": false,
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "gitlens.codeLens.authors.enabled": false,
-  "editor.tabSize": 4,
-  "security.workspace.trust.untrustedFiles": "newWindow",
   "files.exclude": {
     ".vscode": true,
     "**/__pycache__": true,
@@ -105,11 +102,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.defaultFormatter": "prettier.prettier-vscode",
   "workbench.editor.empty.hint": "hidden",
   "update.showReleaseNotes": false,
   "security.promptForLocalFileProtocolHandling": false,
-  "workbench.activityBar.location": "top",
   "editor.hideCursorInOverviewRuler": true,
   "window.titleBarStyle": "custom",
   "editor.scrollbar.vertical": "visible",
@@ -226,46 +221,21 @@
   "editor.wordWrap": "on",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.gpuAcceleration": "off",
-  // "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-  "github.copilot.selectedCompletionModel": "",
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "editor.tabCompletion": "on",
   "color-highlight.matchWords": true,
   "window.commandCenter": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false,
-    "csharp": false,
-    "jsonc": true,
-    "go": true,
-    "html": true,
-    "json": true,
-    "latex": true,
-    "sql": true,
-    "python": true,
-    "r": true
   },
+  "python.analysis.autoImportCompletions": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.activateEnvironment": true,
+  "python.languageServer": "Pylance",
+  "python.venvPath": ".venv",
   "python.envFile": "${workspaceFolder}/.env",
-  "remote.defaultExtensionsIfInstalledLocally": [
-    "GitHub.copilot",
-    "GitHub.copilot-chat",
-    "GitHub.vscode-pull-request-github"
-  ],
-  "python.analysis.typeCheckingMode": "strict",
-  "workbench.iconTheme": "symbols",
+  "workbench.iconTheme": "flow-deep",
   "python.analysis.diagnosticMode": "openFilesOnly",
   "editor.hover.enabled": "off",
-  "breadcrumbs.enabled": false,
   "problems.visibility": true,
-  "chat.mcp.discovery.enabled": {
-    "claude-desktop": true,
-    "windsurf": true,
-    "cursor-global": true,
-    "cursor-workspace": true
-  },
   "window.menuBarVisibility": "toggle",
   "terminal.integrated.suggest.enabled": true,
   "javascript.suggest.completeFunctionCalls": true,
@@ -366,7 +336,6 @@
       }
   ],
   "terminal.integrated.copyOnSelection": true,
-  "github.copilot.nextEditSuggestions.fixes": true,
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
   "editor.inlineSuggest.enabled": true,
@@ -374,6 +343,7 @@
   "editor.codeActionsOnSave": {
       "source.organizeImports": "always",
       "source.sortImports": "explicit",
+      "source.fixAll.eslint": "explicit"
   },
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.acceptSuggestionOnEnter": "on",
@@ -397,9 +367,11 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
     }
   },
   // Zen Mode settings
@@ -407,7 +379,6 @@
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
   "errorLens.enabled": true,
-  "editor.fontSize": 14,
   "errorLens.statusBarIconsEnabled": true,
   "errorLens.gutterIconsEnabled": true,
   "errorLens.followCursor": "activeLine",
